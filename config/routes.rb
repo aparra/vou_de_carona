@@ -1,9 +1,12 @@
 VouDeCarona::Application.routes.draw do
+  root :to => "welcome#in dex"
+  match '/' => "welcome#index"
+ 
   resources :caroneiros
   resources :newsletter
   resources :itinerario
   resource :session
-    
+
   match '/welcome' => "welcome#index", :as => "welcome"
   match '/home' => "home#index", :as => "home"
 
