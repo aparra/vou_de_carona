@@ -1,0 +1,45 @@
+<%= form_for(@caroneiro, :html => {:class => "form"}) do |f| %>
+  <% if @caroneiro.errors.any? %>
+    <div id="error_explanation" class="error">
+      <h3><%= pluralize(@caroneiro.errors.count, "erro") %> ao salvar Caroneiro:</h3>
+      <ul>
+	      <% @caroneiro.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<section class="fields-section-separator">
+	  <div class="field large">
+	    <%= f.label :nome %><br />
+	    <%= f.text_field :nome %>
+	  </div>
+	  <div class="field large">
+	    <%= f.label :email %><br />
+	    <%= f.text_field :email %>
+	  </div>
+	  <div class="field medium">
+	    <%= f.label :twitter %><br />
+	    <%= f.text_field :twitter %>
+	  </div>
+	  <div class="field medium">
+	    <%= f.label :facebook %><br />
+	    <%= f.text_field :facebook %>
+	  </div>
+	</section>	
+	<section class="selection-division">
+		<div class="field small">
+			<%= f.label :password, "Senha" %><br/>
+			<%= f.password_field :password %>
+		</div>
+		<div class="field small">
+			<%= f.label :password_confirmation, "Confirme a senha" %><br/>
+			<%= f.password_field :password_confirmation %>
+		</div>
+	</section>	
+
+  <div class="actions">
+    <%= f.submit 'Cadatrar', :class => 'green button' %>
+  </div>
+<% end %>

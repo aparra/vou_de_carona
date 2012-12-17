@@ -1,0 +1,74 @@
+<header class="secondary">
+	<div class="group relative">
+		<div class="mask">
+			<section class="marketing">
+				<img src="/assets/banner-home.png" alt="vou de carona"/>
+			</section>
+			<section class="logado">
+				<a href="https://en.gravatar.com/site/login" target="_blank">
+					<%= image_tag current_caroneiro.gravatar_url, :title => "troque seu avatar em gravatar.com" %>
+				</a>
+				<p><%= current_caroneiro.nome %></p>
+				<%= link_to 'logout', logout_path, :class => 'orange button logout' %>
+			</section>
+		</div>
+	</div>
+</header>
+<section class="attendees separator container">
+  <div class="group">
+    <p>
+      <cite>
+				Cadastre suas principais rotas para que os outros caroneiros
+				possam juntar-se a sua viagem!
+      </cite>
+    	<%= link_to 'itinerário', new_itinerario_path, :class => 'green button' %>
+    </p>
+
+    <p class="middle">
+      <cite>
+				Encontre sua carona de forma rápida e segura. Conheça as pessoas
+				e suas rotas disponíveis.
+      </cite>
+    	<%= link_to 'painel de carona', painel_path, :class => 'green button' %>
+    </p>
+
+    <p>
+      <cite>
+				Junte-se aos seus amigos caroneiros e deixe essa viagem ainda 
+				mais divertida. Conecte-se!
+      </cite>
+			<%= link_to 'amigos', amigo_path, :class => 'green button' %>
+    </p>
+  </div>
+</section>
+
+<section class="dicas secondary container">
+  <h1>Conheça nossas dicas</h1>
+  <p>
+		Fique atento as nossas dicas para tornar melhor
+		a sua viagem. Compartilhe informações!
+  </p>
+
+  <ul>
+    <li class="seguranca">
+      <a href="#">
+        <span><strong>Segurança</strong> Cuidados necessários para sua carona</span>
+      </a>
+    </li>
+    <li class="transito">
+      <a href="#">
+        <span><strong>Trânsito</strong> Menos stress mais saúde</span>
+      </a>
+    </li>
+    <li class="caroneiro">
+			<%= link_to conexoes_path do %>
+	      <span><strong>Caroneiros</strong> Veja as conexões com seus amigos</span>
+			<% end %>
+    </li>
+    <li class="rota">
+			<%= link_to minhas_rotas_path do %>
+        <span><strong>Rota</strong> Veja suas rotas cadastradas</span>
+			<% end %>		
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,28 @@
+<section class="interna container">
+	<h1>Painel de caronas</h1>
+
+		<% @rotas.each do |rota| %>
+			<section class="fields-section-separator selection-division">
+				<h3>ROTA: <%= rota.nome %></h3>
+				<section class="owner">
+					<p>
+						<b>publicado por:</b> <%= rota.caroneiro.nome %>
+						<span class="network-degree">
+								<%= current_caroneiro.conhece?(rota.caroneiro) %>
+						</span>
+					</p>
+					<p><b>data publicação:</b> <%= rota.publicada_em.to_formatted_s(:db) %></p>
+				</section>
+				<section class="origem">
+					<h4>endereço de origem</h4>	
+					<p><%= rota.origem.logradouro %> - <%= rota.origem.bairro %><p>
+					<p><%= rota.origem.cidade %> - <%= rota.origem.uf %><p>
+				</section>
+				<section class="destino">
+					<h4>endereço de destino</h4>	
+					<p><%= rota.destino.logradouro %> - <%= rota.destino.bairro %><p>
+					<p><%= rota.destino.cidade %> - <%= rota.destino.uf %><p>
+				</section>
+			</section>
+		<% end %>
+</section>

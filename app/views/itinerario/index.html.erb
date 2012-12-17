@@ -1,0 +1,28 @@
+<section class="interna container">
+	<h1>Minhas rotas</h1>
+
+		<% @rotas.each do |rota| %>
+			<section class="fields-section-separator selection-division">
+				<h3>ROTA: <%= rota.nome %></h3>
+				<section class="owner">
+					<p><b>publicado por:</b> <%= rota.caroneiro.nome %></p>
+					<p><b>data publicação:</b> <%= rota.publicada_em.to_formatted_s(:db) %></p>
+				</section>
+				<section class="origem">
+					<h4>endereço de origem</h4>	
+					<p><%= rota.origem.logradouro %> - <%= rota.origem.bairro %><p>
+					<p><%= rota.origem.cidade %> - <%= rota.origem.uf %><p>
+				</section>
+				<section class="destino">
+					<h4>endereço de destino</h4>	
+					<p><%= rota.destino.logradouro %> - <%= rota.destino.bairro %><p>
+					<p><%= rota.destino.cidade %> - <%= rota.destino.uf %><p>
+				</section>
+				<% if rota.owned_by? current_caroneiro %>
+				  <div class="actions">
+						<%= link_to 'Remover', delete_rota_path(:id => rota.id), :class => 'green button' %>
+					</div>
+				<% end %>
+			</section>
+		<% end %>
+</section>

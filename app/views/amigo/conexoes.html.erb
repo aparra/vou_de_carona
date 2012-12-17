@@ -1,0 +1,17 @@
+<section class="interna container">
+	<h1>Meus amigos caroneiros</h1>
+	<% @caroneiros.each do |caroneiro| %>
+		<section class="fields-section-separator selection-division">
+			<table>
+				<tr>
+					<td class="avatar"><%= image_tag caroneiro.gravatar_url %></td>
+					<td class="info-caroneiro">
+						<h3><%= caroneiro.nome %></h3>
+						<p><b>twitter:</b> <%= caroneiro.twitter %></p>
+						<p><b>facebook:</b> <%= caroneiro.facebook %></p>
+					</td>
+				</tr>
+			</table>	
+		</section>
+	<% end %>
+</section>

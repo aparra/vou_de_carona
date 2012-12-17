@@ -1,0 +1,30 @@
+<section class="interna container">
+	<h1>Conecte-se a outros caroneiros</h1>
+	<p>
+		Encontre seus amigos que também estão a procura de caronas. <br>
+		Aumente sua rede de caroneiros e torne sua viagem mais segura. 
+		Conheça melhor as pessoas que podem viajar com você!
+  </p>
+
+	<% @caroneiros.each do |caroneiro| %>
+		<section class="fields-section-separator selection-division">
+			<table>
+				<tr>
+					<td class="avatar"><%= image_tag caroneiro.gravatar_url %></td>
+					<td class="info-caroneiro">
+						<h3><%= caroneiro.nome %></h3>
+						<p><b>twitter:</b> <%= caroneiro.twitter %></p>
+						<p><b>facebook:</b> <%= caroneiro.facebook %></p>
+					</td>
+					<td id="<%= caroneiro.id %>">
+						<% if not current_caroneiro.conectado?(caroneiro) %>
+							<%= link_to 'Conectar', add_amigo_path(:id => caroneiro.id), :class => 'green button', :remote => true %>
+						<% else %>
+							<p class='conectado'>Conectado :)</p>
+						<% end %>
+					</td>
+				</tr>
+			</table>	
+		</section>
+	<% end %>
+</section>

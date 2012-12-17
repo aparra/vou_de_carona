@@ -1,0 +1,115 @@
+<% @body_id = "welcome-page" %>
+
+<header class="secondary">
+	<div class="group relative">
+		<div class="mask">
+			<section class="marketing">
+				<img src="/assets/banner-home.png" alt="vou de carona"/>
+			</section>
+			<section class="login">
+				<%= form_tag session_path do %>
+					<%= content_tag :p, alert, :class => 'alert' if alert.present? %>
+					<div class="field login-input">
+						<%= label_tag :email, "email" %>
+						<%= text_field_tag :email %>
+					</div>	
+					<div class="field login-input">
+						<%= label_tag :password, "senha" %>
+						<%= password_field_tag :password %>
+					</div>	
+					<div class="actions">
+						<%= submit_tag 'Login', :class => 'orange button' %>
+					</div>
+				<% end %>
+			</section>
+		</div>
+	</div>
+</header>
+
+<section class="attendees separator container">
+  <h1>Ajude a minimizar o trânsito!</h1>
+  <p>
+		Trânsito diário, horas de espera, longos congestionamentos, barulho e muito
+		estresse. Esse é o cotidiano de muitas cidades brasileiras. Você pode ajudar
+		a minimizar isso compartilhando a sua viagem com pessoas que percorrem o mesmo
+		caminho que você.	<b>VOU DE CARONA</b> é a novidade que vai aliviar o trânsito e o seu bolso.
+  </p>
+</section>
+
+<section class="dicas separator secondary container">
+  <h1>Conheça nossas dicas</h1>
+  <p>
+		Fique atento as nossas dicas para tornar melhor
+		a sua viagem. Compartilhe informações!
+  </p>
+
+  <ul>
+    <li class="seguranca">
+      <a href="#">
+        <span><strong>Segurança</strong> Cuidados necessários para sua carona</span>
+      </a>
+    </li>
+    <li class="transito">
+			<a href="#">
+				<span><strong>Trânsito</strong> Menos stress mais saúde</span>
+			</a>	
+    </li>
+    <li class="caroneiro">
+			<a href="#">
+	      <span><strong>Caroneiros</strong> Veja as conexões com seus amigos</span>
+			</a>
+    </li>
+    <li class="rota">
+			<a href="#">
+        <span><strong>Rota</strong> Veja suas rotas cadastradas</span>
+			</a>		
+    </li>
+  </ul>
+</section>
+
+<section class="calendar secondary container">
+  <h1>Próximas funcionalidades</h1>
+  <p>
+    Conheça nossas próximas funcionalidades e ajude-nos a melhorar,
+    deixe seu recado!
+  </p>
+
+  <table class="dates">
+      <tbody><tr class="in_person">
+        <td class="details">
+          <span class="tag">Carona online</span>
+        </td>
+        <td class="name">
+					Mais iteratividade no painel de caronas, você poderá encontrar caronas em tempo real
+        </td>
+      </tr>
+      <tr class="in_person">
+        <td class="details">
+          <span class="tag">Timeline</span>
+        </td>
+        <td class="name">
+					Conheça quem está pegando carona com quem e as novas ofertas de caronas dos seus amigos
+        </td>
+      </tr>
+      <tr class="in_person">
+        <td class="details">
+          <span class="tag">Calculadora</span>
+        </td>
+        <td class="name">
+					Calcule quanto você está economizando dando caronas
+        </td>
+      </tr>
+  </tbody></table>
+</section>
+
+<div class="container">
+	<section class="newsletter box">
+		<h1>Receba nossa newsletter</h1>
+		<p>
+			Saiba quando novas funcionalidades forem lançados através de nossa newsletter.
+		</p>
+		<p class="link">
+			<%= link_to 'Cadastre-se agora!', new_newsletter_path, :class => 'green button' %>
+		</p>
+	</section>
+</div>

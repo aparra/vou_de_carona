@@ -1,0 +1,62 @@
+<html lang="pt-BR" class="js csscolumns audio">
+	<head>
+    <meta charset="UTF-8">
+    <title>Vamos diminuir o trânsito • Vou de Carona</title>
+    <meta content="Anderson Parra" name="author">
+		<%= stylesheet_link_tag "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	
+  <body <%= " id=#{@body_id}" if @body_id %> class="site-home pt-BR production js non-ie firefox">
+		<div style="display: none;" id="olark">
+			<olark><iframe frameborder="0" id="olark-loader"></iframe></olark>
+		</div>
+    <header class="main">
+      <div class="container">
+				<p class="titulo">Vamos diminuir o trânsito • Vou de Carona •</p>
+        <ul>
+          <li class="home">
+						<% if not logged_in? %>
+							<%= link_to 'Home', welcome_path %>
+						<% else %>
+							<%= link_to 'Home', home_path %>
+						<% end %>	
+					</li>
+					<% if logged_in? %>
+          	<li><%= link_to 'Logout', logout_path %></li>
+					<% else %>		
+						<li class="cadastro"><%= link_to 'Cadastre-se', new_caroneiro_path %></li>
+					<% end %>	
+          <li class=""><a href="#">Segurança</a></li>
+          <li><a href="mailto:caronas@gmail.com">Contato</a></li>
+        </ul>
+      </div>
+    </header>
+
+		<%= yield %>
+
+		<footer>
+			<div class="container">
+	    	<dl class="about-vou-de-carona">
+	      	<dt>Sobre o Vou de Carona</dt>
+					<dd>
+	          O <b>VOU DE CARONA</b> foi criado a partir da necessidade de reduzir o trânsito. <br>
+						Pegue carona nessa ideia e faça sua parte para um mundo melhor.
+					</dd>
+					<dd>
+						&copy; 2012 Vou de Carona, Todos os direitos reservados.
+					</dd>
+				</dl>
+
+				<dl class="other-info">
+					<dt>Outras informações</dt>
+					<dd>
+						<a href="#"><img src="/assets/twitter.png"></a>
+						<a href="#"><img src="/assets/facebook.jpg"></a>
+					</dd>
+				</dl>
+			</div>
+		</footer>
+	</body>
+</html>

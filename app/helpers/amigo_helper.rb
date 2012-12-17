@@ -1,0 +1,2 @@
+module AmigoHelper
+end

@@ -1,0 +1,29 @@
+<section class="attendees separator interna container">
+	<h1>Newsletter</h1>
+  <p>
+		Você receberá por email as novidades do <b>VOU DE CARONA</b>. <br>
+		Verifique se o email <strong>caronas@gmail.com</strong> caiu na sua caixa de spam.
+  </p>
+
+	<%= form_for(@assinante_newsletter, :url => url_for(:controller => 'newsletter', :action => 'create'), :html => { :class => "form"}) do |f| %>
+	  <% if @assinante_newsletter.errors.any? %>
+	    <div id="error_explanation" class="error">
+	      <h3><%= pluralize(@assinante_newsletter.errors.count, "erro") %> ao salvar Assinante:</h3>
+	      <ul>
+		      <% @assinante_newsletter.errors.full_messages.each do |msg| %>
+		        <li><%= msg %></li>
+		      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	  <div class="field large">
+	    <%= f.label :email %><br />
+	    <%= f.text_field :email %>
+	  </div>
+
+	  <div class="actions">
+	    <%= f.submit 'Assinar', :class => 'green button' %>
+	  </div>
+	<% end %>
+</section>

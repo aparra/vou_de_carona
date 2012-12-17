@@ -1,0 +1,631 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+audio, canvas, video {
+	display: inline-block;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+.group:before, .group:after {
+	content: "";
+	display: table;
+}
+.group:after {
+	clear: both;
+}
+.group {
+}
+.relative {
+	position: relative;
+}
+.container {
+	margin: 0 auto;
+	width: 840px;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #222222;
+	font-family: sans-serif;
+}
+body {
+	color: #444444;
+	font-family: "Lucida Grande",Arial,sans-serif;
+	font-size: 14px;
+	line-height: 1.6;
+}
+cite {
+	font-style: normal;
+}
+p + p {
+	margin-top: 20px;
+}
+a {
+	color: #07A6F0;
+}
+section, header, footer, article, aside {
+	display: block;
+}
+a img {
+	border: medium none;
+}
+header.main {
+	background: url("/assets/header-bg.jpg") repeat scroll 0 0 transparent;
+	border-bottom: 1px solid #212326;
+	padding: 20px 0;
+}
+header.main .container {
+	position: relative;
+}
+header.main ul {
+	list-style: none outside none;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+header.main li {
+	float: left;
+	margin-left: 20px;
+}
+#welcome-page header.main .home a, #cadastro-page header.main .cadastro a, header.main li a:hover {
+	border-bottom: 7px solid #FFFFFF;
+}
+header.main li a, .titulo {
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 18px;
+	letter-spacing: -1px;
+	line-height: 1;
+	padding-bottom: 5px;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+footer {
+	background: none repeat scroll 0 0 #F2F2F2;
+	border-top: 1px solid #E4E4E4;
+	color: #666666;
+	font-size: 11px;
+	margin-top: 40px;
+	overflow: hidden;
+	padding: 40px 0;
+}
+footer .container {
+	overflow: hidden;
+}
+footer .about-vou-de-carona {
+	background: url("/assets/logo.png") no-repeat transparent;
+	float: left;
+	padding-left: 80px;
+	width: 460px;
+}
+footer .other-info {
+	float: right;
+	width: 240px;
+}
+footer dt {
+	color: #222222;
+	font-size: 12px;
+	font-weight: bold;
+}
+footer dd + dd {
+	margin-top: 20px;
+}
+footer a {
+	color: #222222;
+}
+header.secondary {
+	background-color: black;
+	border-top: 1px solid #47494D;
+	margin-bottom: 40px;
+	position: relative;
+}
+header.secondary h1 {
+	color: #FFFFFF;
+	font-size: 24px;
+}
+header.secondary .details h1 {
+	width: 450px;
+}
+header.secondary .details p {
+	width: 410px;
+}
+header.secondary .details {
+	float: left;
+	min-height: 140px;
+	padding: 40px 0;
+	width: 100%;
+}
+header.secondary .details a {
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+header.secondary .details p {
+	color: #D3D4D5;
+}
+header.secondary p.call-to-action {
+	color: #FFDD00;
+	font-weight: bold;
+	line-height: 32px;
+	padding-left: 105px;
+	position: relative;
+}
+#home header.secondary .container {
+	position: relative;
+}
+#home header.secondary .details {
+	float: left;
+	width: 840px;
+}
+header.secondary .mask {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+		height: 200px;
+}
+.separator {
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 40px;
+}
+.fields-section-separator {
+	border-bottom: 1px solid #CCCCCC;
+	padding-bottom: 20px;
+}
+.attendees h1 {
+	font-size: 36px;
+}
+.attendees .group {
+	margin-top: 20px;
+}
+.attendees .group p {
+	float: left;
+	margin-top: 0;
+	padding-bottom: 25px;
+	position: relative;
+	width: 240px;
+}
+.attendees .group p:nth-child(n+4) {
+	padding-bottom: 0;
+}
+.attendees .group p:before {
+	color: #5A910E;
+	content: "•";
+	font-family: helvetica,arial,sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	left: -25px;
+	position: absolute;
+	top: -15px;
+}
+.attendees cite {
+	display: block;
+}
+.attendees .middle {
+	margin: 0 60px;
+}
+.attendees a {
+	color: #222222;
+	font-weight: bold;
+	text-decoration: none;
+}
+.attendees a:hover {
+	text-decoration: underline;
+}
+.attendees a:before {
+	background-repeat: no-repeat;
+	content: "";
+	display: inline-block;
+	height: 16px;
+	margin-right: 5px;
+	position: relative;
+	top: 4px;
+}
+.attendees .twitter:before {
+	background-image: url("/assets/bird.png");
+}
+section.secondary {
+	margin-top: 40px;
+	overflow: hidden;
+	padding-bottom: 40px;
+	position: relative;
+}
+section.secondary h1 {
+	font-size: 18px;
+}
+section.secondary h1, section.secondary p {
+	width: 240px;
+}
+.calendar table {
+	border-collapse: collapse;
+	float: left;
+	margin-top: -25px;
+	width: 540px;
+}
+.calendar td {
+	background: none repeat scroll 0 0 transparent !important;
+	border: 1px solid #DDDDDD;
+	padding: 10px;
+}
+.calendar .details {
+	border-right: medium none;
+	text-align: center;
+}
+.calendar .name {
+	border-left: medium none;
+	color: #777777;
+	font-size: 11px;
+}
+.calendar .name a {
+	font-size: 14px;
+	font-weight: bold;
+}
+.calendar p {
+	float: left;
+	margin-right: 60px;
+}
+.dicas ul {
+	list-style: none outside none;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.dicas li {
+	float: left;
+	margin-left: 20px;
+	position: relative;
+}
+.dicas li span {
+	bottom: 10px;
+	left: 10px;
+	position: absolute;
+}
+.dicas strong {
+	display: block;
+	font-size: 18px;
+	text-transform: capitalize;
+}
+.dicas li a {
+	border-radius: 3px 3px 3px 3px;
+	color: #FFFFFF;
+	display: block;
+	font-size: 9px;
+	height: 110px;
+	line-height: 1.2;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 120px;
+	z-index: 900;
+}
+.dicas .seguranca a {
+	background: none repeat scroll 0 0 #67871A;
+}
+.dicas .transito a {
+	background: none repeat scroll 0 0 #5831A0;
+}
+.dicas .caroneiro a {
+	background: none repeat scroll 0 0 #AA2715;
+}
+.dicas .rota a {
+	background: none repeat scroll 0 0 #52A1BC;
+}
+.newsletter {
+	background-image: url("/assets/mail.png");
+}
+.content h2 {
+	font-size: 36px;
+}
+.columns {
+	margin-bottom: 20px;
+}
+.columns dt {
+	color: #222222;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.columns dd:before {
+	content: "•";
+	margin: 0 10px 0 -20px;
+}
+.columns dl {
+	float: left;
+	width: 240px;
+}
+.columns .middle {
+	margin: 0 60px;
+}
+.content p + h2, .content p + ul, .content ul + p, .content ul + h2, .content video + h3, #player + h3 {
+	margin-top: 40px;
+}
+.content .note {
+	font-size: 11px;
+	font-style: italic;
+}
+.box {
+	background-color: #E3EAEF;
+	background-position: 20px center;
+	background-repeat: no-repeat;
+	border: 1px solid #D5E2EF;
+	border-radius: 3px 3px 3px 3px;
+	margin: 20px 0;
+	padding: 20px 20px 20px 80px;
+	position: relative;
+}
+.box.mail {
+	background-image: url("/assets/mail.png");
+}
+.box h1, .box h2 {
+	font-size: 18px;
+	line-height: 1;
+}
+.box .link {
+	position: absolute;
+	right: 20px;
+	top: 5px;
+}
+.download {
+	background-image: url("/assets/box.png");
+}
+.download .link a {
+	width: 82px;
+}
+.dates {
+	border-collapse: collapse;
+	margin: 20px 0;
+	position: relative;
+	width: 100%;
+}
+.dates td {
+	border: 1px solid #DDDDDD;
+	padding: 10px;
+}
+.dates th {
+	padding: 10px;
+	text-align: left;
+}
+.dates .button {
+	float: right;
+	width: 100px;
+}
+.pricing:after {
+	content: url("/assets/view-price.png");
+	display: block;
+	position: absolute;
+	right: 0;
+	top: -90px;
+}
+.dates thead {
+	display: none;
+}
+.dates .tag {
+	border-radius: 3px 3px 3px 3px;
+	display: block;
+	font-weight: bold;
+	padding: 2px 4px;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+	text-transform: lowercase;
+}
+.dates .online .tag {
+	background: none repeat scroll 0 0 #FEBD4B;
+	color: #996633;
+}
+.dates .in_person .tag {
+	background: none repeat scroll 0 0 #77D1F4;
+	color: #42788E;
+}
+.dates tbody tr:nth-child(2n) td {
+	background: none repeat scroll 0 0 #FAFAFA;
+}
+.dates .type {
+	border-right-width: 0;
+	text-align: center;
+	width: 100px;
+}
+.dates .description, .dates .duration {
+	border-width: 1px 0;
+}
+.dates .attend {
+	border-left-width: 0;
+	width: 142px;
+}
+.button {
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background: none repeat-x scroll 0 0 transparent;
+	border-color: transparent;
+	border-radius: 5px 5px 5px 5px;
+	border-style: solid;
+	border-width: 0 1px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	padding: 0 10px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+.button:hover, .button.disabled {
+	background-position: 0 -30px;
+}
+.button.green {
+	background-image: url("/assets/green-button.png");
+	border-color: #87AA4A;
+	color: #5D7731;
+}
+.button.orange {
+	background-image: url("/assets/green-button.png");
+	border-color: #87AA4A;
+	color: #5D7731;
+}
+.button.green.disabled {
+	color: #8EAB55;
+}
+.button.orange {
+	background-image: url("/assets/orange-button.png");
+	border-color: #E8AA41;
+	color: #996633;
+}
+.button.orange.disabled {
+	color: #CB9849;
+}
+.center {
+	text-align: center;
+}
+.highlight {
+	background: none repeat scroll 0 0 #FFDD00;
+	border-radius: 4px 4px 4px 4px;
+	color: #000000;
+	display: inline-block;
+	padding: 2px 4px;
+}
+.form {
+	margin: 20px 100px;
+}
+.field {
+	margin-bottom: 15px;
+}
+.large {
+	width: 100%;
+}
+.medium {
+	width: 50%;
+}
+.small {
+	width: 25%;
+}
+.field input, .field select {
+	-moz-transition: all 0.2s linear 0s;
+	background: -moz-linear-gradient(center top , #F6F6F6, #FFFFFF) repeat-x scroll 0 0 #FFFFFF;
+	border: 1px solid #C0C8D2;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) inset;
+	font-size: 13px;
+	height: 32px;
+	margin: 0;
+	padding: 7px 8px;
+	width: 100%;
+}
+.field input:focus {
+	border-color: #A9B3C0;
+	outline: 0 none;
+}
+.error {
+	margin-bottom: 20px;
+	color: red;
+}
+.selection-division {
+	margin-top: 20px;
+}
+#new_assinante_newsletter {
+	margin-bottom: 12%;
+}
+.sucesso {
+	margin-bottom: 24%;
+}
+.marketing {
+	float: left;
+	width: 400px;
+}
+.login {
+	float: right;
+	width: 300px;
+	color: white;
+}
+.login-input {
+	width: 265px;
+}
+.logado img {
+	margin-top: 20px;
+}
+.logado {
+	float: right;
+	width: 300px;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+}
+.bem-vindo {
+	margin-top: 30px !important;
+	font-size: 22px;
+}
+.logout {
+	margin: 10px;
+}
+.interna {
+	margin-top: 30px;
+}
+.interna h1 {
+	font-size: 36px;
+}
+.origem, .destino, .owner {
+	margin: 20px 0;
+}
+.origem p, .destino p, .owner p {
+	margin-top: 0;
+}
+.avatar {
+	width: 100px;
+}
+.info-caroneiro {
+	width: 600px;
+}
+.info-caroneiro p, .info-caroneiro h3 {
+	margin-top: 2px;
+	margin-left: 20px;
+}
+.conectado {
+	-moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  background: none repeat-x scroll 0 0 transparent;
+  border-color: transparent;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid;
+  border-width: 0 1px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  background-image: url("/assets/orange-button.png");
+  border-color: #E8AA41;
+  color: #996633;
+}
+.network-degree {
+	background: -moz-linear-gradient(center top , #C7EBF6, #FFFFFF) repeat scroll 0 0 transparent;
+	border: 1px solid #3399CC;
+	border-radius: 6px 6px 6px 6px;
+	color: #3399CC;
+	display: inline-block;
+	font-size: 11px !important;
+	font-style: normal !important;
+	font-weight: bold !important;
+	line-height: 12px !important;
+	margin-top: -4px;
+	min-width: 20px;
+	padding: 0 4px !important;
+	text-align: center !important;
+	vertical-align: middle;
+}
+.notice { 
+	color: green; 
+}
+.alert { 
+	color: red; 
+}
