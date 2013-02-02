@@ -1,0 +1,11 @@
+var button = $("#<%= @rota.id %>"); 
+
+if (button.html() == 'Ativar') {
+	button.html("Desativar");
+	button.href = '/itinerario/rota/<%= @rota.id %>/ativo/false'
+	button.removeClass('green').addClass('orange');
+} else {
+	button.html("Ativar");
+	button.href = '/itinerario/rota/<%= @rota.id %>/ativo/true';
+	button.removeClass('orange').addClass('green');
+}

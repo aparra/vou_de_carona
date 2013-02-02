@@ -1,5 +1,5 @@
 class Rota < ActiveRecord::Base
-  attr_accessible :caroneiro, :origem, :destino, :publicada_em, :nome, :origem_attributes, :destino_attributes
+  attr_accessible :caroneiro, :origem, :destino, :publicada_em, :nome, :ativa, :origem_attributes, :destino_attributes
 
   belongs_to :caroneiro
 

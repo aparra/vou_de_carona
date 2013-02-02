@@ -42,3 +42,6 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'gravtastic'
+gem 'twitter'
+gem 'omniauth'
+gem 'omniauth-twitter'
