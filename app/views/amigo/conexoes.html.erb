@@ -1,5 +1,12 @@
 <section class="interna container">
 	<h1>Meus amigos caroneiros</h1>
+	
+	<% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+  <% elsif flash[:alert] %>
+		<p class="alert"><%= flash[:alert] %></p>
+	<% end %>	
+	
 	<% @caroneiros.each do |caroneiro| %>
 		<section class="fields-section-separator selection-division">
 			<table>
