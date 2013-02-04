@@ -11,7 +11,9 @@ class Rota < ActiveRecord::Base
   def owned_by?(owner)
     return false unless owner.is_a? Caroneiro
     caroneiro == owner
+  end
+  
+  def mapa
+    [origem, destino].to_gmaps4rails
   end  
 end
-
-

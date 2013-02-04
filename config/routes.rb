@@ -15,6 +15,7 @@ VouDeCarona::Application.routes.draw do
 
   match '/itinerario/rota/:id' => "itinerario#destroy", :as => "delete_rota"
   match '/itinerario/rota/:id/ativo/:status' => "itinerario#edit", :as => "edit_rota"
+  match '/itinerario/rota/:id/mapa' => "itinerario#mapa", :as => "mapa"
   match '/minhas-rotas' => "itinerario#index", :as => "minhas_rotas"
   match '/painel-de-caronas' => "itinerario#painel", :as => "painel"
 

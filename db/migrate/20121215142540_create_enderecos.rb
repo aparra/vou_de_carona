@@ -7,6 +7,9 @@ class CreateEnderecos < ActiveRecord::Migration
       t.string :bairro
       t.string :cidade
       t.string :uf
+      t.float :longitude
+      t.float :latitude
+      t.boolean :gmaps
       t.integer :rota_id
       t.integer :origem_id
       t.integer :destino_id

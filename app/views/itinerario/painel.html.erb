@@ -23,9 +23,23 @@
 					<p><%= rota.destino.logradouro %> - <%= rota.destino.bairro %><p>
 					<p><%= rota.destino.cidade %> - <%= rota.destino.uf %><p>
 				</section>
+				<div class="actions">
+					<input type="button" id="<%= rota.id %>" class="green button ver-mapa" value="Ver Mapa" />
+					<img src="/assets/icone_novo.gif" class="novo"/>
+				</div>
+				
+				<% if rota.id == 1 %>
+					<div id="mapa-<%= rota.id %>" class="mapa">
+						<%= gmaps4rails(rota.mapa) %>
+					</div>
+				<% end %>
 			</section>
-			<div class="actions">
-				<a href="#" id="ver-mapa" class="green button mapa">Ver Mapa</a>
-			</div>
 		<% end %>
 </section>
+
+<script type="text/javascript">
+	$(".ver-mapa").on("click", function() {
+		var button = $(this);
+		$("#mapa-" + button.attr("id")).toggle();
+	});
+</script>

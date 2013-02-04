@@ -15,7 +15,7 @@ class TwitterController < ApplicationController
     end
     
     caroneiros = Caroneiro.where('twitter IN (?)', amigos_twitter);
-    current_caroneiro.caroneiros.push(*@caroneiros)
+    current_caroneiro.caroneiros.push(*caroneiros)
     
     if amigos_twitter.size > 0
       redirect_to conexoes_path, :notice => "#{caroneiros.size} novo(s) amigo(s) adicionado(s)"

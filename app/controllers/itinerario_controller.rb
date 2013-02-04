@@ -32,6 +32,6 @@ class ItinerarioController < ApplicationController
   end
 
   def painel
-    @rotas = Rota.order("publicada_em DESC").all
+    @rotas = Rota.where("ativa = ?", true).order("publicada_em DESC").all
   end
 end

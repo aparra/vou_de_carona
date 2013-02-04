@@ -22,7 +22,8 @@
 							<%= link_to 'Desativar', edit_rota_path(:id => rota.id, :status => 'false'), :id => rota.id, :class => 'orange button', :remote => true %>
 						<% else %>
 							<%= link_to 'Ativar', edit_rota_path(:id => rota.id, :status => 'true'), :id => rota.id, :class => 'green button', :remote => true %>
-							<% end %>
+						<% end %>
+						<img src="/assets/icone_novo.gif"/>
 					</div>
 				<% end %>
 			</section>
