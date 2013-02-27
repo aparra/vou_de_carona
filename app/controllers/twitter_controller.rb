@@ -9,11 +9,6 @@ class TwitterController < ApplicationController
     end
 
     amigos_twitter = []
-    
-    if current_caroneiro.email == 'ander.pp@gmail.com'
-      amigos_twitter << '@ligia1986'
-    end
-    
     caroneiros = Caroneiro.where('twitter IN (?)', amigos_twitter);
     current_caroneiro.caroneiros.push(*caroneiros)
     
